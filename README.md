@@ -1,1 +1,1 @@
-# apiBeautyHub
+# api-beauty-hub
