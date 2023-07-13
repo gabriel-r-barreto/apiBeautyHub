@@ -31,9 +31,9 @@ export class Controller {
         const descrAtt = rows[0].descr
         const category_idAtt = rows[0].category_id
         const dt_validadeAtt = rows[0].dt_validade
-
+       
         try {
-            await connection.query(`UPDATE products SET pname="${pname ? pname : pnameAtt}", descr="${descr ? descr : descrAtt}", dt_validade="${dt_validade ? Date.parse(dt_validade) : Date.parse(dt_validadeAtt)}", category_id=${category_id ? category_id : category_idAtt} WHERE id=${id} `);
+            await connection.query(`UPDATE products SET pname="${pname ? pname : pnameAtt}", descr="${descr ? descr : descrAtt}", dt_validade="${dt_validade ? dt_validade : dt_validadeAtt}", category_id=${category_id ? category_id : category_idAtt} WHERE id=${id} `);
             return response.status(201).json({ message: 'Editato com sucesso.' });
             } catch (error) {
                 console.error(error);
