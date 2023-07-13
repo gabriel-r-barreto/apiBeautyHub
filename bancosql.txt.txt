@@ -2,11 +2,6 @@ USE BeautyDB;
 
 CREATE DATABASE BeautyDB;
 
-CREATE TABLE users (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(255) NOT NULL,
-    pass VARCHAR(255) NOT NULL
-);
 
 INSERT INTO users (email, pass) VALUES ("igor@gmail.com", "123456");
 
@@ -28,7 +23,9 @@ id INT AUTO_INCREMENT, PRIMARY KEY(id),
 pname VARCHAR(255) NOT NULL,
 descr VARCHAR(255) NOT NULL,
 category_id integer,
+quantidade integer,
 dt_validade Date,
+image_base64 BLOB,
 constraint fkcategory_id foreign key(category_id) references category(id)
 );
 
