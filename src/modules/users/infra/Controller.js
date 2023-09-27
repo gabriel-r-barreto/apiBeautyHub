@@ -27,7 +27,7 @@ export class Controller {
 
     async auth(request, response) {
         const { email, passwrd } = request.body;
-        const [rows, fields] = await connection.query(`SELECT * FROM users WHERE email LIKE "${email}" && passwrd LIKE "${pass}";`);
+        const [rows, fields] = await connection.query(`SELECT * FROM users WHERE email LIKE "${email}" && passwrd LIKE "${passwrd}";`);
         
         if(rows == undefined){
             return response.status(404).json({
