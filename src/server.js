@@ -4,8 +4,7 @@ import express from 'express';
 import routes from './routes.js'
 import './connection.js'
 import cors from 'cors';
-
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 
 const app = express();
 
